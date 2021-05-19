@@ -6,7 +6,10 @@ const Todo = require("../models/todo")
 router.get("/",(req,res)=>{
     
     Todo.find((err,todos)=>{
-        res.json(todos);
+        if(err) 
+            res.send(err);
+        else
+            res.json(todos);
     });
 
 });
