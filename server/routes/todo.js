@@ -53,9 +53,10 @@ router.put("/:todoId",(req,res)=>{
 
     const todoId = req.params.todoId;
     const task = req.body.task;
-    Todo.findByIdAndUpdate(todoId,{task:task},(err,todo)=>{
+    Todo.findByIdAndUpdate(todoId,{task:task,date:Date.now()},(err,todo)=>{
         if(err || !todo){
             res.status(404);
+            console.log(err);
             res.send("Todo not found");
         }
         else{
