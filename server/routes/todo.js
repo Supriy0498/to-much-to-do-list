@@ -48,4 +48,21 @@ router.delete("/:todoId",(req,res)=>{
     });
 });
 
+//route-> /api/todos/:todoId
+router.put("/:todoId",(req,res)=>{
+
+    const todoId = req.params.todoId;
+    const task = req.body.task;
+    Todo.findByIdAndUpdate(todoId,{task:task},(err,todo)=>{
+        if(err || !todo){
+            res.status(404);
+            res.send("Todo not found");
+        }
+        else{
+            res.status(200);
+            res.send("Todo updated");
+        }
+    });
+});
+
 module.exports = router;
