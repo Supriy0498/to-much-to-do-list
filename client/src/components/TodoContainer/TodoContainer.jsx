@@ -39,6 +39,7 @@ export default function TodoContainer() {
             updateTodos={getTodos}
             />
             <div style={styles.divider}></div>
+            <div className="no-task-div">{todos.length?null:"No Tasks"}</div>
             {todos.map((todo,index)=>
                 <Todo
                 key={index}

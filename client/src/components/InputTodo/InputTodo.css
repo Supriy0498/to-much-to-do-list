@@ -19,5 +19,22 @@
 
 ::placeholder {
     color: #BBBBD7;
-    opacity: 1; /* Firefox */
+    opacity: 1;
   }
+
+.icon-btn{
+    color: white;
+    background-color: #4A82B6;
+    border: none;
+    border-color: transparent;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+.icon-btn:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}

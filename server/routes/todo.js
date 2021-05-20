@@ -38,7 +38,6 @@ router.post("/",(req,res)=>{
 router.delete("/:todoId",(req,res)=>{
 
     const todoId = req.params.todoId;
-    console.log(todoId);
     Todo.findByIdAndDelete(todoId,(err,todo)=>{
         if(err || !todo){
             res.status(404);

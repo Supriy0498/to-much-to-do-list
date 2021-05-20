@@ -11,6 +11,7 @@ export default function InputTodo(props) {
         
         axios.post(url,{task:task})
             .then(res=>{
+                setTask("")
                 props.updateTodos();
             })
             .catch(err=>console.log(err));
@@ -31,7 +32,7 @@ export default function InputTodo(props) {
             value={task} 
             onChange={handleOnChange}
             placeholder="Add a new task.."/>
-            <button onClick={handleOnClick}>Add</button>
+            <button className="icon-btn" onClick={handleOnClick}><i class="fa fa-plus"></i></button>
         </div>
     )
 }
