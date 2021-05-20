@@ -13,7 +13,7 @@
     box-sizing: border-box;
 }
 
-.del-btn{
+.todo button{
     float: right;
     margin-right: 10px;
     background-color: transparent;
@@ -22,7 +22,19 @@
 }
 
 
-.del-btn:hover{
+.todo button:hover{
     cursor: pointer;
     transform: scale(1.05);
+}
+
+.todo input{
+    background-color: transparent;
+    font-size: 1.2rem;
+    border: none;
+    border-color: transparent;
+    color: white;
+}
+
+.todo input:focus {
+    outline-width: 0;
 }
